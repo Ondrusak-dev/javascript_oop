@@ -1,35 +1,63 @@
+/**
+ * @callback TableCallback
+ * @param {HTMLTableSectionElement} tbody
+ * @param {ColspanType | RowspanType} elem
+ * @returns {void}
+ */
+import { Manager } from "./manager.js";
+
 class Table{
     /**
      * @type {HTMLTableSectionElement}
      */
-    #tbody
-    #manager
+    #tbody;
 
+    /**
+     * @type {Manager}
+     */
+    #manager;
+
+    /**
+     * 
+     * @param {HeaderArrayType} HeaderArray 
+     * @param {Manager} manager 
+     */
     constructor(headerArray, manager){
-        this.headerArray = headerArray
-        this.#manager = manager
+        const table = document.createElement('table');
+        document.body.appendChild(table);
 
-        const table = document.createElement("table")
-        document.body.appendChild(table)
+        const thead = document.createElement('thead');
+        table.appendChild(thead);
 
-        const thead = document.createElement("thead")
-        table.appendChild(thead)
+        const tr = document.createElement('tr');
+        thead.appendChild(tr);
 
-        const tr = document.createElement("tr")
-        thead.appendChild(tr)
+        for (const something of headerArray){
+            const th = document.createElement('th');
+            th.innerText = something.name;
 
-        for(const a of data){
-            const th = document.createElement("th")
-            tr.appendChild(th)
-            th.innerText = a.name
-
-            if(th.colSpan){
-                th.colSpan = a.colSpan
+            if (something.colspan == 2){
+                th.colSpan = 2
             }
+            tr.appendChild(th);
+        }
 
-            const tbody = document.createElement("tbody")
-            table.appendChild(tbody)
+        const tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+        this.#tbody = tbody;
+        this.#manager = manager;
+    }
+
+    /**
+     * 
+     * @param {TableCallback} tableCallback 
+     */
+
+    setAppendRow(tableCallback) {
+        this.#manager.addCallback = (element) => {
+            tableCallback(this.#tbody, element);
         }
     }
 }
+
 export {Table}

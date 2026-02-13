@@ -1,38 +1,42 @@
 /**
- * @import {FormFieldType,HeaderArrayType,ColspanType,RowspanType} from './functions.js'
- */
- 
-/**
- * @type {ColspanType[] | RowspanType[]}
- *
- * @callback addCallback
- * @param {ColspanType | RowspanType} param
+ * @import { FormFieldType, HeaderArrayType, ColspanType, RowspanType } from './functions.js'
+ * @callback AddCallback
+ * @param {ColspanType | RowspanType} element
  * @returns {void}
  */
-class Manager {
-    #DataArray
- 
+
+class Manager{
     /**
-     * @type {addCallback}
+     * @type {ColspanType[] | RowspanType[]}
      */
-    #addCallback
-    set addCallback(parameter)
-    {
-        this.#addCallback = parameter
+    #dataArray;
+
+    /**
+     * @type {AddCallback}
+     */
+    #addCallback;
+
+    constructor(){
+        this.#dataArray = [];
     }
- 
-    constructor()
-    {
-        this.#DataArray = []
-    }
- 
-    addElement(param)
-    {
-        this.#DataArray.push(param)
-        if(this.#addCallback)
-        {
-            this.#addCallback(param)
+
+    /**
+     * @param {ColspanType | RowspanType} param
+     */
+    addElement(param){
+        this.#dataArray.push(param);
+
+        if (this.#addCallback){
+            this.#addCallback(param);
         }
     }
+
+    /**
+     * @param {AddCallback} param
+     */
+    set addCallback(param){
+        this.#addCallback = param;
+    }
 }
+
 export {Manager}
