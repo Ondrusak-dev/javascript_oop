@@ -1,0 +1,58 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>
+</help_text><element><id>UMLClass</id><coordinates><x>630</x><y>0</y><w>100</w><h>30</h></coordinates><panel_attributes>SimpleClass</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>1770</y><w>210</w><h>30</h></coordinates><panel_attributes>HTMLTableSectionElement</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>1770</y><w>170</w><h>30</h></coordinates><panel_attributes>HTMLFormElement
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>1770</y><w>150</w><h>30</h></coordinates><panel_attributes>HTMLInputElement</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>1770</y><w>120</w><h>30</h></coordinates><panel_attributes>HTMLDivElement</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>1660</y><w>710</w><h>180</h></coordinates><panel_attributes>html
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>1840</y><w>760</w><h>320</h></coordinates><panel_attributes>mi view osztályaint
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>2160</y><w>710</w><h>190</h></coordinates><panel_attributes>a mi típusaink
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>2350</y><w>710</w><h>190</h></coordinates><panel_attributes>service
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>1880</y><w>220</w><h>110</h></coordinates><panel_attributes>Table
+-
+tbody: HTMLTableSectionElement
+manager Manager
+-
++ constructor {header: HeaderType}
++ SetAppendRow: TableCallback void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>2050</y><w>180</w><h>60</h></coordinates><panel_attributes>TableCallback
+-
++Tbody </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>1980</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>1790</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>2370</y><w>270</w><h>110</h></coordinates><panel_attributes>Manager
+-
+DataArray: ColspanType[]  RowspanType[]
+addCallback: AddCallback
+-
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>2400</y><w>210</w><h>50</h></coordinates><panel_attributes>AddCallback
+-
+elem: ColspanType |  RowspanType</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>2400</y><w>220</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+az addelement meghívja</panel_attributes><additional_attributes>10;20;200;20</additional_attributes></element><element><id>Relation</id><coordinates><x>50</x><y>1920</y><w>230</w><h>520</h></coordinates><panel_attributes>lt=&lt;.
+SetAppendrow-t állítja be</panel_attributes><additional_attributes>210;500;10;500;10;10;210;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>2180</y><w>100</w><h>100</h></coordinates><panel_attributes>RowspanType
+-
+-nemzet :string
+-szerzo :string 
+-mu :string
+-szerzo2 :string
+-mu2 :string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>2180</y><w>100</w><h>90</h></coordinates><panel_attributes>ColspanType
+-
+-neve :string
+-kor :string
+-szerelme1 :string
+-szerelme2 :string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>2190</y><w>130</w><h>120</h></coordinates><panel_attributes>FormFieldType
+-
+-label :string
+-name :string
+-id :required
+-type :string
+-:required :required</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>2270</y><w>280</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes><additional_attributes>10;10;10;100;120;100;120;50;260;50;260;100</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>2260</y><w>390</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes><additional_attributes>10;10;10;130;370;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>1870</y><w>290</w><h>130</h></coordinates><panel_attributes>FormController
+-
+-manager: Manager
+-FormfieldList
+-
+-
+-createElement retur ColspanType | RowspanType</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>830</x><y>1880</y><w>160</w><h>100</h></coordinates><panel_attributes>FormField
+-
+-input : HTMLInputElement
+name : string
+errorDiv : HTMLDivElement
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>1990</y><w>310</w><h>210</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;190;10;140;290;140;290;10</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>1990</y><w>310</w><h>210</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;190;10;160;290;160;290;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>1790</y><w>120</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>100;10;100;40;10;40;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>1880</y><w>280</w><h>530</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;40;10;40;190;260;190;260;510;160;510</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>1720</y><w>490</w><h>180</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;50;10;10;470;10;470;160</additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>1790</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>1990</y><w>150</w><h>220</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;200;10;180;130;180;130;10</additional_attributes></element></diagram>
